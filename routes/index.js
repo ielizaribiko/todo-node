@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'TODO App - Node Express Dust Mongo', nombre: 'Tony'});
+  res.render('index', { title: 'TO-DO App', nombre: 'Tony'});
 });
 
 module.exports = router;
