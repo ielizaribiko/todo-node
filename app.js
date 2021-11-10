@@ -12,8 +12,6 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const { fstat } = require('fs');
 
-var app = express();
-
 const liveReloadServer = livereload.createServer();
 liveReloadServer.server.once("connection", () => {
   setTimeout(() => {
@@ -21,6 +19,7 @@ liveReloadServer.server.once("connection", () => {
   }, 100);
 });
 
+var app = express();
 app.use(connectLiveReload());
 
 // view engine setup

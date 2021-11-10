@@ -1,1 +1,9 @@
-Hello {nombre} !!
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{title}</title>
+    </head>
+    <body>
+        Hello {nombre} !!
+    </body>
+</html>
