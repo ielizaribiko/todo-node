@@ -1,0 +1,10 @@
+@import "palette";
+
+.border-standard(@color: @primary-color,@width: 1px,@radius: 5px) {
+    border-style: solid;
+    border-width: @width;
+    border-color: @color;
+    -moz-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    border-radius: @radius;
+}

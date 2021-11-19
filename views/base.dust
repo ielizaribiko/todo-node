@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    {>"common/head_tags"/}
+    <body>
+        <article>
+            {>"common/header"/}
+            {>"common/body-content"/}        
+            {>"common/footer"/}
+        </article>    
+    </body>
+</html>

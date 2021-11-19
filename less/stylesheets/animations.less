@@ -1,0 +1,13 @@
+.background-color-transition(@color,@time: 300ms, @type: linear) {
+    background-color: @color;
+    -webkit-transition: background-color @time @type;
+    -ms-transition: background-color @time @type;
+    transition: background-color @time @type;
+}
+
+.color-transition(@color,@time: 300ms, @type: linear) {
+    color: @color;
+    -webkit-transition: color @time @type;
+    -ms-transition: color @time @type;
+    transition: color @time @type;
+}
