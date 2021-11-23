@@ -3,21 +3,28 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node server.js",
-    "start:watch": "nodemon --ext js,json,dust,less ./server.js"
+    "start": "supervisor -w . -e js,dust,less,json -i public,node_modules -s -n error server.js",
+    "start:watch": "nodemon --ext js,json,dust,less ./server.js",
+    "build": "grunt"
   },
   "dependencies": {
-    "adaro": "^1.0.4",
+    "consolidate": "^0.16.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dustjs-helpers": "^1.7.4",
+    "dustjs-linkedin": "^2.7.2",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
   },
   "devDependencies": {
     "connect-livereload": "^0.6.1",
-    "less-middleware": "^3.1.0",
-    "livereload": "^0.9.3",
-    "nodemon": "^2.0.15"
+    "grunt": "^1.4.1",
+    "grunt-contrib-cssmin": "^4.0.0",
+    "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-dustjs": "^1.4.0",
+    "grunt-shell": "^3.0.1",
+    "supervisor": "^0.12.0"
   }
 }

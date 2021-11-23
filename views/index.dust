@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>{title}</title>
-        <link rel="stylesheet" href="/less/estilos.css" />
+        <link rel="stylesheet" href="public/stylesheets/styles.min.css" />
     </head>
     <body>
         <div class="header">
