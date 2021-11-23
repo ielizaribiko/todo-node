@@ -1,0 +1,6 @@
+<button type="{type}" class="button button__{style}">
+    {?icon}
+        {>"components/common/icon"/}        
+    {/icon}
+    {text}
+</button>

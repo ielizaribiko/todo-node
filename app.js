@@ -7,6 +7,8 @@ var logger = require('morgan');
 var livereload = require("livereload");
 var connectLiveReload = require("connect-livereload");
 
+var LowdbDatabase = require('./services/database');
+var db = new LowdbDatabase();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -19,11 +21,22 @@ liveReloadServer.server.once("connection", () => {
   }, 100);
 });
 
+
 var app = express();
 app.use(connectLiveReload());
 
 // view engine setup
-app.engine('dust', dust.dust({}));
+var opts = {
+  helpers: [
+    './views/helpers/custom-helpers', // relative paths work
+    'dustjs-helpers', // so do installed modules
+    // {
+    //   name: './my/factory',
+    //   arguments: [ 'an argument' ] // or use this signature if you need to pass in additional args
+    // }
+  ]
+};
+app.engine('dust', dust.dust(opts));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'dust');
 

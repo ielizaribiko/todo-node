@@ -1,0 +1,32 @@
+@import "borders";
+
+input, textarea, select{
+    width: 100%;
+    padding: .7rem;
+    .border-standard();
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__row {
+    display:flex;
+    flex-direction: column;
+    margin: .5rem;
+}
+
+.form__label {
+    margin-bottom: .3rem;
+}
+
+.form__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}

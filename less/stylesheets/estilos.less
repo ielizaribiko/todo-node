@@ -2,11 +2,23 @@
 @import "dimens";
 @import "borders";
 @import "animations";
+@import "buttons";
+@import "forms";
 
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+img {
+    border: none;
+    margin: 0;
+    padding:0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }
 
 html, body {
@@ -14,6 +26,7 @@ html, body {
     height: 100%;
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 article{
     display: flex;
@@ -32,6 +45,7 @@ article{
 
 .site-name {
     font-size: @dim-text-xl;
+    color: @secondary-color;
 }
 .content {
     display: flex;
@@ -57,25 +71,90 @@ article{
     text-align: center;
 }
 
-.todo-list{
+.message {
+    padding: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+.message--error{
+    background-color: @error-bgcolor;
+    color: @error-text-color;
+    .border-standard(@error-border-color,'1px',0);
+}
+
+.message--success{
+    background-color: @success-bgcolor;
+    color: @success-text-color;
+    .border-standard(@success-border-color,'1px',0);
+}
+
+.task-list{
     display: flex;
     flex-direction: column;
     .border-standard();
 }
 
-.todo-list__item {
+.task-list__item {
     padding: 1.5rem;
     border-style: solid;
-    border-width: 0 0 1px 0;
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-left-width: 5px;
     border-color: @primary-color;
+    border-left-color: white;
 
-    &:hover{
-        .background-color-transition(@primary-color);
-        color: @secondary-color;
+    &:hover{        
         cursor: pointer;
+        border-left-color: @primary-color;
     }
 
     &:last-child {
-        border-width: 0;
+        border-bottom-width: 0;
     }
+}
+
+.modal__wrapper {
+    display: none;
+}
+.modal__background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal {
+    width: 50%;
+    .border-standard();
+    background-color: @secondary-color;
+}
+
+.modal__title {
+    font-size: 1.2rem;
+    border-style: solid;
+    border-width: 0 0 1px 0;
+    border-color: black;
+    padding: 1rem;
+    margin: .5rem;
+}
+
+.modal__content {
+    padding: 1rem;
+    margin: .5rem;
+}
+
+.modal__buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem;
+    padding: 1rem;
 }

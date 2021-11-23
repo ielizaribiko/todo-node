@@ -1,0 +1,3 @@
+<a href="/task/{id}" class="task-list__item">
+    {title}
+</a>

@@ -1,3 +1,4 @@
 <div class="content">
+    {?message}{>"components/common/message"/}{/message}
     {+bodyContent}{/bodyContent}
 </div>

@@ -1,0 +1,45 @@
+@import "palette";
+
+.button {
+    display: inline-flex;
+    flex-direction: row;
+    vertical-align: center;
+    justify-content: center;
+    gap: .5rem;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border: none;
+}
+.button__main {
+    background-color: @button-main-bgcolor;
+    color: @button-main-color;
+    
+    &:hover {
+        .background-color-transition(@button-main-bgcolor-highlight);
+        cursor: pointer;
+    }
+
+    &>svg{
+        fill: @button-main-color;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+.button__secondary {
+    background-color: @button-secondary-bgcolor;
+    color: @button-secondary-color;  
+
+    &:hover {
+        .background-color-transition(@button-secondary-bgcolor-highlight);
+        cursor: pointer;
+    }
+
+    &>svg{
+        fill: @button-secondary-color;
+        width: 24px;
+        height: 24px;
+    }
+}
+

@@ -1,5 +1,0 @@
-<div class="todo-list">
-    {#tasks}
-        {>"components/todo-list/todo-list-item"/}
-    {/tasks}
-</div>

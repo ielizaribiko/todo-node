@@ -1,0 +1,6 @@
+<a href="{route}" class="button button__{style}">
+    {?icon}
+        {>"components/common/icon"/}        
+    {/icon}
+    {text}
+</a>

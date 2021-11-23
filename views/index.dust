@@ -1,4 +1,4 @@
 {>"base"/}
 {<bodyContent}
-    {>"components/todo-list/todo-list"/}
+    {>"components/task/task-list/task-list"/}
 {/bodyContent}

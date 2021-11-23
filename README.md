@@ -148,7 +148,7 @@ Ahora podremos cargar la página desde el navegador en la url http://localhost:3
 Si hacemos algún cambio, por ejemplo cambiando `nombre: 'Rasputin'` por `nombre: 'Pepe'` y recargamos la url, veremos que no se han aplicado los cambios. Es necesario reiniciar el servidor para que se apliquen y esto no es nada cómodo. Para que se apliquen los cambios directamente sin necesidad de recargar la página ni reiniciar el servidor, utilizaremos los paquetes `nodemon`, `livereload` y `connect-livereload`.
 
 El paquete `nodemon` se encarga de observar si se han hecho cambios en alguno de los archivos del proyecto, en cuyo caso reinicia el servidor de forma automática. 
-El paquete `livereload` levanta un servidor livereload durante el inicio del servidor express que. La única función de este servidor es devolver la orden de refrescar la página en la primera conexión que recibe.
+El paquete `livereload` levanta un servidor livereload durante el inicio del servidor. La única función de este servidor es devolver la orden de refrescar la página en la primera conexión que recibe.
 Por último, el paquete `connect-livereload` es un middleware que añade el script de livereload en las response de Express. Este script envía requests al servidor de livereload y, si recibe respuesta, recarga la página porque significa que el servidor express ha sido reiniciado.
 
 En primer lugar, instalamos las dependencias en el proyecto:

@@ -1,4 +1,4 @@
 <head>
-    <title>{title}</title>
-    <link rel="stylesheet" href="stylesheets/estilos.css"  />
+    <title>TO-DO App demo</title>
+    <link rel="stylesheet" href="/stylesheets/estilos.css"  />
 </head>

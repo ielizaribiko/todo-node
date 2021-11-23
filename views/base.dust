@@ -6,6 +6,14 @@
             {>"common/header"/}
             {>"common/body-content"/}        
             {>"common/footer"/}
-        </article>    
+        </article>
+        {+javascripts}
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+            <script type="text/javascript" src="/javascripts/common.js"></script>
+        {/javascripts}
+        
+        {+styles}
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        {/styles}
     </body>
 </html>

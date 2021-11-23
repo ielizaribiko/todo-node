@@ -1,0 +1,35 @@
+<div class="form__container">
+    <input type="hidden" name="id" value="{?id}{id}{/id}" />
+    <div class="form__row">
+        <label class="form__label" for="task_title">Title</label>
+        <input class="form__input" type="text" name="title" value="{title}" />        
+    </div>
+    <div class="form__row">
+        <label class="form__label" for="task_title">Description</label>
+        <textarea class="form__input" name="description">{description}</textarea>        
+    </div>
+    <div class="form__row">
+        <label class="form__label" for="task_title">Limit date</label>
+        <input class="form__input js-input-datetime" type="text" name="limitDate" value="{limitDate}" />     
+    </div>   
+    <div class="form__buttons">
+        {>"components/common/link-button" 
+            route="/"
+            style="secondary"
+            icon="cancel"
+            text="Cancel"
+        /}
+        {>"components/common/link-button" 
+            route="javascript:showModal('task-delete')"
+            style="secondary"
+            icon="delete"
+            text="Delete"
+        /}
+        {>"components/common/form-button" 
+            type="submit"
+            style="main"
+            icon="save"
+            text="Save"
+        /}
+    </div>
+</div>

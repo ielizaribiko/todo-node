@@ -1,0 +1,8 @@
+{>"base"/}
+{<bodyContent}
+    <form action="/task" method="POST">
+    {>"components/task/task-detail/task-detail-form"/}
+    </form>
+
+    {>"components/task/task-detail/task-delete-modal"/}
+{/bodyContent}

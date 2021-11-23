@@ -1,0 +1,11 @@
+<div class="task-list">
+    {>"components/common/link-button" 
+            route="/task"
+            style="main"
+            icon="add"
+            text="New Task"
+        /}
+    {#tasks}
+        {>"components/task/task-list/task-list-item"/}
+    {/tasks}
+</div>

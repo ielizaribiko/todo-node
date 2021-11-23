@@ -1,0 +1,9 @@
+<div class="modal__wrapper js-modal-{+modal_id/}">
+    <div class="modal__background">
+        <div class="modal">
+            <div class="modal__title">{+modal_title/}</div>
+            <div class="modal__content">{+modal_content/}</div>
+            <div class="modal__buttons">{+modal_buttons/}</div>
+        </div>
+    </div>
+</div>
